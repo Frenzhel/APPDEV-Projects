@@ -37,3 +37,7 @@ btns.forEach((btn) => {
         value.textContent = count
     })
 })
+
+// num = Math.floor(Math.Random() * 100)
+// integer = (Math.Random()) < 0.5 ? -1 : 1
+// return = integer * num
