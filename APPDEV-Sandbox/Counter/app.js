@@ -18,9 +18,9 @@ btns.forEach((btn) => {
             count += 5
         }else if(styles.contains(`random`)){
             if(count>0){
-                count = Math.floor(Math.random() * -100)
+                count = Math.floor(Math.random() * -999)
             }else if(count<0){
-                count = Math.floor(Math.random() * 100)
+                count = Math.floor(Math.random() * 999)
             }
         }else{
             count=0
