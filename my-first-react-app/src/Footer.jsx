@@ -3,7 +3,7 @@ export default function Footer(){
     return(
         <footer>
             <p>
-                &copy; {new DataTransfer.getFullYear()} My Food Website || Written by: Tom Hanks
+                &copy; {new Date().getFullYear()} My Food Website || Written by: Tom Hanks
             </p>
         </footer>
     )
