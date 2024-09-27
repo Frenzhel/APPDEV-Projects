@@ -17,18 +17,12 @@ export default function QuotesGenerator(){
     function getRandomNumber (){
         return Math.floor(Math.random() *seneccaquotes.length)
     }
-
     function getRandomQuoteSenecca() {
-        let y = "";
-        let quote;
+        let quote = seneccaquotes[Math.floor(Math.random() * seneccaquotes.length)];
         if (x==seneccaquotes.length){
             x = []
+            quote = seneccaquotes[Math.floor(Math.random() * seneccaquotes.length)]
         }
-        
-        do{
-            quote = seneccaquotes[Math.floor(Math.random() * seneccaquotes.length)];
-        }while (x.includes(quote));
-        x.push(quote);
         return quote
     }
     function getRandomQuoteMarcus() {
