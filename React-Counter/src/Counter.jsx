@@ -25,10 +25,10 @@ export default function Counter(){
     }
     function getRandomNum (){
         let Number = count
-        if(Number>0){
-            Number = Math.floor(Math.random() * -999)
-        }else if(Number<0){
+        if(Number<=0){
             Number = Math.floor(Math.random() * 999)
+        }else if(Number>=0){
+            Number = Math.floor(Math.random() * -999)
         }
         return Number
     }
