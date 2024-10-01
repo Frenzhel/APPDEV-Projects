@@ -10,21 +10,17 @@ const seneccaquotes = ["If you don't know, ask. You will be a fool for the momen
 "Men can be divided into 2 groups:  one that goes ahead and achieves something, and one that comes after and criticizes.",
 "It is not because things are difficult that we do not dare; it is because we do not dare that things are difficult"]
 let m = 0;
-let x = [];
 export default function QuotesGenerator(){
-    const [marcus,setMarcus] = useState(" ")
-    const [senecca,setSenecca] = useState(" ")
-    function getRandomNumber (){
-        return Math.floor(Math.random() *seneccaquotes.length)
-    }
+    const [quote,setQuote] = useState("When granted everything, you can’t do anything. \n -Gojo Satoru")
     function getRandomQuoteSenecca() {
-        let quote = seneccaquotes[Math.floor(Math.random() * seneccaquotes.length)];
-        if (x==seneccaquotes.length){
-            x = []
-            quote = seneccaquotes[Math.floor(Math.random() * seneccaquotes.length)]
-        }
-        return quote
-    }
+        let randomQuote;
+        let newQuote;
+        do {
+          randomQuote = Math.floor(Math.random() * seneccaquotes.length);
+          newQuote = seneccaquotes[randomQuote];
+        } while (newQuote === quote); 
+        return newQuote;
+      }
     function getRandomQuoteMarcus() {
         let y = "";
         if (m>=marcusquotes.length){
@@ -35,31 +31,22 @@ export default function QuotesGenerator(){
         return y
     }
     function randomQuoteChangeSenecca (){
-        setSenecca(getRandomQuoteSenecca())
+        setQuote(getRandomQuoteSenecca())
     }
     function randomQuoteChange (){
-        setMarcus(getRandomQuoteMarcus())
+        setQuote(getRandomQuoteMarcus())
     }
     return(
         <>
         <div className="quotes-generator-container">
             <h1>Quotes Generator</h1>
-            <div className="senecca-quotes">
-                <h2>Senecca's Quotes</h2>
-                <div className="senecca-display">
-                    <p>{senecca}</p>
+            <div className="quote-display">
+                <div className="quote-container">
+                    <p>{quote}</p>
                 </div>
-                <label></label>
-                <button className="senecca" onClick={randomQuoteChangeSenecca}>Senecca</button>
             </div>
-            <div className="marcus-quotes">
-                <h2>Marcus Aurelius's Quotes</h2>
-                <div className="marcus-display">
-                    <p>{marcus}</p>
-                </div>
-                <label></label>
-                <button className="marcus" onClick={randomQuoteChange}>Marcus</button>
-            </div>
+            <button className="senecca" onClick={randomQuoteChangeSenecca}>Senecca</button>
+            <button className="marcus" onClick={randomQuoteChange}>Marcus</button>
         </div>
         </>
     )
