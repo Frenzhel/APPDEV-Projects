@@ -17,6 +17,7 @@ export default function FavoriteGames(){
     return(
         <>
         <div>
+            <br /><br /><br /><br /><br />
             <h2>These are my favorite games in 2024:</h2>
             <ul>
                 {
@@ -28,6 +29,7 @@ export default function FavoriteGames(){
                 <input type="text" name="gameInput" id="gameInput" />
                 <button type="button" onClick={handleAddGame}>Add Game</button>
             </div>
+            <br /><br /><br /><br /><br />
         </div>
         </>
     )
