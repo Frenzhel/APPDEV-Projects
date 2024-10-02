@@ -24,8 +24,10 @@ export default function FavoriteGames(){
                     <li key={index} onClick={() => handleRemoveGame(index)}>{game}</li>)
                 }
             </ul>
-            <input type="text" name="gameInput" id="gameInput" />
-            <button type="button" onClick={handleAddGame}>Add Game</button>
+            <div className="input-containter">
+                <input type="text" name="gameInput" id="gameInput" />
+                <button type="button" onClick={handleAddGame}>Add Game</button>
+            </div>
         </div>
         </>
     )

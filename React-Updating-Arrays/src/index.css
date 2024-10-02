@@ -1,0 +1,82 @@
+header{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(8, 42, 73);
+    color: #7eb0b4;
+    font-size: 1em;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 110%;
+    margin-top: 150px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    background-image: url(https://wallpaperaccess.com/full/849790.gif);
+    background-size: cover;
+}
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #7eb0b4;
+    font-size: 1.75em;
+    text-align: center;
+}
+li{
+    font-size: 2em;
+    list-style: none;
+    padding: 2px;
+    margin: 10px;
+    border: 3px solid;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #7e9ab4;
+}
+li:hover{
+    background-color: #D7BA89;
+    color: #7eb0b4;
+    cursor: pointer;
+}
+.input-containter{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+input[type=text] {
+    border: 3px solid;
+    font-size: 2em;
+    padding:5px; 
+    border:2px solid white; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+button {
+    font-size: 2em;
+    padding: .5%;
+    border: 3px solid;
+    border-radius: 15%;
+    background-color: #7e9ab4;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #D7BA89;
+    color: #7eb0b4;
+    cursor: pointer;
+}
+footer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(8, 42, 73);
+    position: fixed;
+    color: #7eb0b4;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
