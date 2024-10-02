@@ -18,3 +18,10 @@
     text-align: center;
     background-color: gainsboro;
 }
+.list li:hover{
+    color: hsl(0, 0%, 55%);
+    cursor: pointer;
+}
+footer{
+    text-align: center;
+}
