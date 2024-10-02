@@ -45,8 +45,10 @@ export default function QuotesGenerator(){
                     <p>{quote}</p>
                 </div>
             </div>
-            <button className="senecca" onClick={randomQuoteChangeSenecca}>Senecca</button>
-            <button className="marcus" onClick={randomQuoteChange}>Marcus</button>
+            <div className="button-container">
+                <button className="senecca" onClick={randomQuoteChangeSenecca}>Senecca</button>
+                <button className="marcus" onClick={randomQuoteChange}>Marcus</button>
+            </div>
         </div>
         </>
     )

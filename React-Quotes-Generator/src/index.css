@@ -1,7 +1,7 @@
 header{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: rgb(52, 24, 78);
-  color: #B47EB3;
+  background-color: rgb(24, 52, 78);
+  color: #7eb0b4;
   position: fixed;
   left: 0;
   top: 0;
@@ -17,7 +17,7 @@ body{
   left: 0;
   right: 0;
   overflow: auto;
-  background-image: url(https://i.pinimg.com/originals/be/b2/c2/beb2c2837db72e15907eef50ee46797b.gif);
+  background-image: url(https://wallpaperaccess.com/full/2471283.gif);
   background-size: cover;
 }
 .quotes-generator-container{
@@ -31,7 +31,9 @@ body{
 }
 .quote-display {
   align-items: center;
-  background-color: #B47EB3;
+  background-color: #7e9ab4;
+  border: none;
+  border-radius: 50%;
   font-size: 20px;
   font-weight: bold;
   padding: 3.5%;
@@ -44,25 +46,34 @@ body{
 .quote-container{
   width: 100%;
 }
+.button-container{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
 button {
   font-size: 22px;
   padding: .5%;
   border: none;
-  border-radius: 10%;
-  background-color: #B47EB3;
+  border-radius: 15%;
+  background-color: #7e9ab4;
   color: #D7BA89;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 button:hover {
   background-color: #D7BA89;
-  color: #B47EB3;
+  color: #7eb0b4;
 }
 footer {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: rgb(52, 24, 78);
+  background-color: rgb(24, 52, 78);
   position: fixed;
-  color: #B47EB3;
+  color: #7eb0b4;
   bottom: 0;
   width: 100%;
   text-align: center;
