@@ -9,23 +9,22 @@ const Pokedex = () => {
   const [loading, setLoading] = useState(true);
 
   const regionRanges = {
-    Kanto: { start: 1, end: 151 },
-    Johto: { start: 152, end: 251 },
-    Hoenn: { start: 252, end: 386 },
-    Sinnoh: { start: 387, end: 493 },
+    Kanto: [1, 151],
+    Johto: [152, 251],
+    Hoenn: [252, 386],
+    Sinnoh: [387, 493],
   };
 
   useEffect(() => {
     const fetchPokemon = async () => {
       setLoading(true);
-      const { start, end } = regionRanges[selectedRegion];
-      const promises = [];
-      
-      for (let i = start; i <= end; i++) {
-        promises.push(axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`));
-      }
+      const [start, end] = regionRanges[selectedRegion];
 
       try {
+        const promises = Array.from({ length: end - start + 1 }, (_, i) =>
+          axios.get(`https://pokeapi.co/api/v2/pokemon/${start + i}`)
+        );
+
         const results = await Promise.all(promises);
         setPokemon(results.map(res => res.data));
       } catch (error) {
@@ -40,14 +39,22 @@ const Pokedex = () => {
 
   return (
     <div>
-      <h1>PokeDex</h1>
-      <select onChange={(e) => setSelectedRegion(e.target.value)} value={selectedRegion}>
-        {Object.keys(regionRanges).map(region => (
-          <option key={region} value={region}>{region}</option>
-        ))}
-      </select>
+      <nav className="navbar">
+        <h1>PokeDex</h1>
+        <div className="region-buttons">
+          {Object.keys(regionRanges).map(region => (
+            <button 
+              key={region} 
+              className={selectedRegion === region ? 'active' : ''} 
+              onClick={() => setSelectedRegion(region)}
+            >
+              {region}
+            </button>
+          ))}
+        </div>
+      </nav>
       {loading ? (
-        <p>Loading...</p>
+        <img id='loading' src="https://media.giphy.com/media/65oO2hg3xAX04/giphy.gif" alt="" />
       ) : (
         <div className="pokemon-grid">
           {pokemon.map(poke => (

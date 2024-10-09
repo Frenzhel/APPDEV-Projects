@@ -1,16 +1,84 @@
-/* src/App.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  overflow: scroll;
+  background-image: url(https://wallpaperaccess.com/full/8094992.gif);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#loading{
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  top: 0;
+  width: 98%;
+  margin: auto;
+  position: fixed;
+  justify-content: space-between;
+  background-color: #ff0000d5;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+.region-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.region-buttons button {
+  background: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.region-buttons button:hover {
+  background: #ffffff;
+  color: #000000d5;
+}
+
+.region-buttons button.active {
+  background: #ffffff; /* Darker color for the active button */
+  color: #000000;
+}
+
 .pokemon-grid {
   display: flex;
+  margin-top: 100px;
+  margin-bottom: 15px;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  align-items: center;
 }
-
+.pokemon-card img{
+  width: auto;
+  height: 10em;
+}
 .pokemon-card {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
-  width: 150px;
+  width: 20em;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #cccccc42;
+}
+
+.pokemon-card:hover{
+  background-color: #ff0000a6;
+  transition: 0.5s;
 }

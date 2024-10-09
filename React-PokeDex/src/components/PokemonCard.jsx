@@ -1,7 +1,4 @@
-// src/components/PokemonCard.js
-import React from 'react';
-
-const PokemonCard = ({ pokemon }) => {
+export default function PokemonCard({pokemon}){
   return (
     <div className="pokemon-card">
       <h3>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h3>
@@ -10,6 +7,4 @@ const PokemonCard = ({ pokemon }) => {
       <p>Weight: {pokemon.weight / 10} kg</p>
     </div>
   );
-};
-
-export default PokemonCard;
+}
