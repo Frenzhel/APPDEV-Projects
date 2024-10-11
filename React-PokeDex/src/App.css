@@ -8,11 +8,19 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
-#loading{
-  text-align: center;
-  align-content: center;
-  justify-content: center;
+.loading-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;    /* Centers vertically */
+  position: absolute;     /* Allows it to overlay correctly */
+  top: 0;                 /* Start at the top */
+  left: 0;                /* Start from the left */
+  right: 0;               /* Stretch to the right */
+  bottom: 0;              /* Stretch to the bottom */
+  height: 100vh;          /* Full viewport height */
+  z-index: 10;            /* Ensure it appears above other content */
 }
+
 .navbar {
   display: flex;
   align-items: center;
@@ -51,10 +59,49 @@ body {
 }
 
 .region-buttons button.active {
-  background: #ffffff; /* Darker color for the active button */
+  background: #ffffff;
   color: #000000;
 }
+.sorting-container {
+  display: flex;
+  gap: 10px;
+}
+.sorting-container input{
+  background: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: text;
+  transition: background 0.3s;
+}
+.sorting-container input:hover {
+  background: #ffffff;
+  color: #000000d5;
+}
 
+.sorting-container input.active {
+  background: #ffffff;
+  color: #000000;
+}
+.sorting-container select{
+  background: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.sorting-container select:hover {
+  background: #ffffff;
+  color: #000000d5;
+}
+
+.sorting-container select.active {
+  background: #ffffff;
+  color: #000000;
+}
 .pokemon-grid {
   display: flex;
   margin-top: 100px;
@@ -66,7 +113,7 @@ body {
 }
 .pokemon-card img{
   width: auto;
-  height: 10em;
+  height: 12.5em;
 }
 .pokemon-card {
   border: 1px solid #ccc;
@@ -75,10 +122,11 @@ body {
   text-align: center;
   width: 20em;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  background-color: #cccccc42;
+  background-color: #ffffffb6;
 }
 
 .pokemon-card:hover{
   background-color: #ff0000a6;
   transition: 0.5s;
+  cursor: pointer;
 }
