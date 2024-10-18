@@ -31,13 +31,13 @@ export default function Login() {
 
     function renderLogin(){
         return(
-            <div>
+            <div className="login-container">
                 <h1>Login: </h1>
-                Username: <input type="text" placeholder="username" id="username" onChange={getUserName} />
+                Username: <input type="text" placeholder="username" id="username" className="username" onChange={getUserName} />
                 <br />
-                Password: <input type="text" placeholder="password" id="password" onChange={getPassword} />
-                <br />
-                <button onClick={handleLogin}>Login</button>
+                Password: <input type="text" placeholder="password" id="password" className="password" onChange={getPassword} />
+                <br /><br />
+                <button className="login-button" onClick={handleLogin}>Login</button>
             </div>
         )
     }
@@ -50,7 +50,7 @@ export default function Login() {
     //function to render admin page
     function renderAdmin(){
         return(
-            <AdminPanel isLoggedIn = {isLoggedIn} accounts = {accounts}/>
+            <AdminPanel isLoggedIn = {isLoggedIn} accounts = {ac}/>
         )
     }
     //handles renderLogin based on login credentials

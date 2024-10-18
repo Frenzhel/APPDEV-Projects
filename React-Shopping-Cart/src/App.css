@@ -1,7 +1,52 @@
 body {
-  text-align: justify;
-  align-self: center;
+  background-image: url("https://cdna.artstation.com/p/assets/images/images/011/865/070/original/pixel-jeff-market.gif?1531830311");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 110%;
+  justify-content: center;
+}
+h1, p, li {
+  color: #048f39;
+  text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 3px #ffffff;
+  font-weight: bold;
+}
+.login-container {
+  color: #048f39;
+  text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 3px #ffffff;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
-  align-content: center;
+}
+.username, .password {
+  border: 5px ridge #048f39; 
+  outline: none; 
+  transition: border-color 0.3s ease; 
+  font-size: 20px;
+  color: rgb(20, 20, 20);
+  background-color: #ffffff;
+  text-align: center;
+  max-width:100%;
+}
+.username:focus, .password:focus{
+  box-shadow: 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px #ffffff;
+  border: 5px ridge #00ff62; 
+}
+.login-button {
+  display: block; 
+  margin: 0 auto; 
+  padding: 10px 20px; 
+  background-color: #048f39;
+  color: white; 
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer; 
+  transition: 0.5s ease;
+}
+.login-button:hover {
+  background-color: #00ff62;
+  transition: 0.5s ease;
+  box-shadow: 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px #ffffff;;
 }
