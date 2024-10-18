@@ -1,0 +1,92 @@
+/* Details.css */
+*{
+    margin: 0;
+    padding: 0;
+}
+.details-container {
+    display: flex;
+    align-items: center;
+    height: auto;
+    justify-content: space-between;
+    position: relative;
+    width: 90%;
+    margin:0 auto;
+    min-height: 51em;
+}
+.details-content {
+    text-align: center;
+    margin:3em;
+    padding: 3em; 
+    background-color: #101010ee;
+    border-radius: 3em;
+    width: 70em;
+    border: 10px ridge rgb(0, 0, 0);
+}
+.models{
+    height: min-content;
+    object-fit: contain;
+    width: min-content;
+    min-height: 8em;
+    margin-bottom: -2.75em;
+}
+.details-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+}
+.details-container .nav-arrow {
+    font-size: 2em;
+    background-color: red;
+    border: 10px ridge rgb(200, 0, 0);
+    cursor: pointer;
+    padding: 1em;
+    transform: translateY(-50%);
+    z-index: 1;
+    user-select: none;
+    border-radius: 3em;
+    color: white;
+    margin-top: -10em;
+    position: static;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.details-container .nav-arrow:hover {
+    transform: scale3d(1.1, 1.1, 1.1) translateY(-50%); 
+
+}
+.details-container .nav-arrow:active {
+    transform: scale3d(0.9, 0.9, 0.9) translateY(-50%); 
+    background-color: darkred;
+}
+
+.details-specific{
+    background-color: white;
+    border: 10px ridge rgb(200, 200, 200);
+    padding: 2em;
+    border-radius: 2.5em;
+}
+img{
+    margin-bottom: -3em;
+}
+.details-specific h1{
+    margin: 0;
+}
+.types-container {
+    display: flex;
+    gap: 10px; 
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0.5em;
+}
+
+.type-badge {
+    padding: 5px 10px;
+    border-radius: 5px; 
+    color: white;
+    font-weight: bold; 
+}
+
+.Card h4{
+    position: absolute;
+    margin-bottom: -5em;
+    font-size: 1.3em;
+}

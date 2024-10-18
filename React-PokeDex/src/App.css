@@ -1,132 +1,220 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  overflow: scroll;
-  background-image: url(https://wallpaperaccess.com/full/8094992.gif);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+:root{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.loading-container {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;    /* Centers vertically */
-  position: absolute;     /* Allows it to overlay correctly */
-  top: 0;                 /* Start at the top */
-  left: 0;                /* Start from the left */
-  right: 0;               /* Stretch to the right */
-  bottom: 0;              /* Stretch to the bottom */
-  height: 100vh;          /* Full viewport height */
-  z-index: 10;            /* Ensure it appears above other content */
+body{
+  background-color: #ffffff;
 }
-
-.navbar {
+.con-content {
+  background-color: rgb(30, 30, 30);
+  margin:5em;
+  padding: 1em;
+  border-radius: 3em;
+  border: 10px ridge rgb(0, 0, 0);
+}
+.PokemonCard{
+  position: relative;
   display: flex;
+  background-color: rgb(255, 0, 0);
+  border: 6px ridge rgb(200, 0, 0);
+  color: white;
+  width: 13em;
+  height: 13em;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  border-radius: 1em;
+  margin: 1em;
+  padding: 3.5em;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+.PokemonCard:hover {
+  box-shadow: 0px 0px 5px 5px #ffffff;
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+.card-name {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  padding: 3.5em;
+  border-radius: 1em;
+  text-align: center;
+  transition: transform 0.5s ease;
+}
+.PokemonCard:hover .card-name {
+  display: block;
+  transition: transform 0.5s ease;
+}
+ a .PokemonCard img{
+  justify-content: center;
   align-items: center;
-  top: 0;
-  width: 98%;
-  margin: auto;
-  position: fixed;
-  justify-content: space-between;
-  background-color: #ff0000d5;
-  padding: 10px 20px;
-  color: white;
+  margin:0 auto;
 }
-
-.navbar h1 {
-  margin: 0;
+.PokemonCard h2{
+  font-size: 2em;
 }
-
-.region-buttons {
+.PokemonCard h3{
+  margin-top: 0;
+}
+#label{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 75px;
+  text-align: center;
+}
+#container{
   display: flex;
-  gap: 10px;
-}
-
-.region-buttons button {
-  background: #000000;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.region-buttons button:hover {
-  background: #ffffff;
-  color: #000000d5;
-}
-
-.region-buttons button.active {
-  background: #ffffff;
-  color: #000000;
-}
-.sorting-container {
-  display: flex;
-  gap: 10px;
-}
-.sorting-container input{
-  background: #000000;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  cursor: text;
-  transition: background 0.3s;
-}
-.sorting-container input:hover {
-  background: #ffffff;
-  color: #000000d5;
-}
-
-.sorting-container input.active {
-  background: #ffffff;
-  color: #000000;
-}
-.sorting-container select{
-  background: #000000;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.sorting-container select:hover {
-  background: #ffffff;
-  color: #000000d5;
-}
-
-.sorting-container select.active {
-  background: #ffffff;
-  color: #000000;
-}
-.pokemon-grid {
-  display: flex;
-  margin-top: 100px;
-  margin-bottom: 15px;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
   justify-content: center;
   align-items: center;
 }
-.pokemon-card img{
+#Loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  margin:0 auto;
+  height: 43em;
   width: auto;
-  height: 12.5em;
-}
-.pokemon-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
   text-align: center;
-  width: 20em;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  background-color: #ffffffb6;
 }
 
-.pokemon-card:hover{
-  background-color: #ff0000a6;
-  transition: 0.5s;
-  cursor: pointer;
+.active-link {
+  color: orange; /* Active link color */
+  font-weight: bold;
+}
+a{
+  text-decoration: none;
+}
+
+
+.evolution-container {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.evolution-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0em;
+  flex-wrap: wrap; /* Support wrapping for smaller screens */
+}
+
+.evolution-item {
+  text-align: center;
+  display: flex;
+  flex-direction: flex;
+  align-items: center;
+  margin-top: 2em;
+  margin-left: 0;
+}
+.evolution-item{
+  font-size: 1.2em;
+}
+
+.evolution-item img {
+  margin-bottom: 1em;
+}
+
+.evolution-arrow {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  font-size: 2em;
+  margin: 0.5em;
+  
+}
+.Card{
+  background-color: rgb(200, 200, 200); /* Light blue background */
+  padding: 1em;
+  border-radius: 1em;
+  width: 8em;
+  min-height: 8em;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0 auto;
+  flex-direction: column-reverse;
+  outline: 10px ridge rgb(200, 200, 200);
+}
+li a {
+  text-decoration: none;
+  color: black; /* Default text color */
+  padding: 10px;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+nav h1 a{
+  color: white;
+}
+/* Active link styles */
+.active {
+  background-color: white;
+  color: red;
+  font-weight: bold;
+}
+
+#Loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  margin:0 auto;
+  height: 43em;
+  width: auto;
+  text-align: center;
+}
+.bar-container{
+  width: 50%;
+}
+.stat-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  align-self: center;
+  align-content: center;
+  width: 60%;
+}
+#stat-label{
+  min-width: 8em;
+  text-align: right;
+  align-self: center;
+  font-weight: bold;
+}
+#stat-value{
+  min-width: 8em;
+  text-align: left;
+  align-self: center;
+  font-weight: bold;
+}
+footer{
+  border-top: 5px ridge rgb(150, 0, 0);
+  border: 5px ridge rgb(150, 0, 0);
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+  margin: 0 auto;
+  background-color: rgb(200, 0, 0);
+  width: 98.5%;
+  bottom: 0;
+  position: static;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25em;
+  color: #ffffff;
 }
