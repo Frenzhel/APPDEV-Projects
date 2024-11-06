@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-export default function Receipt({ cart, totalPrice, amountPaid, onPayment }) {
-  const [additionalPayment, setAdditionalPayment] = useState('');
+export default function Receipt({ cart, totalPrice, amountPaid, onPayment, onShopAgain }) {
+  const [additionalPayment, setAdditionalPayment] = useState('')
 
   const handlePaymentChange = (e) => {
     setAdditionalPayment(e.target.value);
-  };
+  }
 
   const handleSubmitAdditionalPayment = () => {
     const paymentAmount = Number(additionalPayment);
@@ -13,7 +13,7 @@ export default function Receipt({ cart, totalPrice, amountPaid, onPayment }) {
       onPayment(paymentAmount);
       setAdditionalPayment('');
     }
-  };
+  }
 
   const remainingBalance = totalPrice - amountPaid;
   const change = amountPaid - totalPrice;
@@ -26,12 +26,13 @@ export default function Receipt({ cart, totalPrice, amountPaid, onPayment }) {
         <div>
           <h3>Remaining Balance: ${remainingBalance}</h3>
           <input
+            className="payInput"
             type="number"
             value={additionalPayment}
             onChange={handlePaymentChange}
             placeholder="Enter additional payment"
           />
-          <button onClick={handleSubmitAdditionalPayment}>Pay</button>
+          <button className="payButton" onClick={handleSubmitAdditionalPayment}>Pay</button>
         </div>
       ) : (
         <div>
@@ -52,8 +53,14 @@ export default function Receipt({ cart, totalPrice, amountPaid, onPayment }) {
           ) : (
             <p style={{ color: 'green' }}>Thank you for your purchase!</p>
           )}
+
+          {change >= 0 && (
+            <button onClick={onShopAgain} className="shopAgainButton">
+              Shop Again
+            </button>
+          )}
         </div>
       )}
     </div>
-  );
+  )
 }

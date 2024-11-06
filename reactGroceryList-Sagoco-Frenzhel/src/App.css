@@ -11,42 +11,149 @@ h1, p, li {
   text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 3px #ffffff;
   font-weight: bold;
 }
-.login-container {
-  color: #048f39;
-  text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 3px #ffffff;
-  font-weight: bold;
+.itemSale {
   display: flex;
-  flex-direction: column; 
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 5em;
 }
-.username, .password {
-  border: 5px ridge #048f39; 
-  outline: none; 
-  transition: border-color 0.3s ease; 
-  font-size: 20px;
-  color: rgb(20, 20, 20);
-  background-color: #ffffff;
+
+.itemSale li {
+  list-style: none;
   text-align: center;
-  max-width:100%;
+  width: 200px;
 }
-.username:focus, .password:focus{
-  box-shadow: 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px #ffffff;
-  border: 5px ridge #00ff62; 
+
+.itemSale img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
 }
-.login-button {
-  display: block; 
-  margin: 0 auto; 
-  padding: 10px 20px; 
+
+.itemCart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 5em;
+}
+
+select {
+  padding: 5px 10px;
+  border: 2px solid #048f39;
+  border-radius: 4px;
   background-color: #048f39;
-  color: white; 
-  border: none; 
-  border-radius: 5px;
-  cursor: pointer; 
+  font-size: 16px;
+  color: #ffffff;
+  outline: none;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+select:focus {
+  box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
   transition: 0.5s ease;
 }
-.login-button:hover {
-  background-color: #00ff62;
+
+select:hover {
+  box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
   transition: 0.5s ease;
-  box-shadow: 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px #ffffff;;
+}
+
+.addButton {
+  padding: 5px 10px;
+  background-color: #048f39;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.addButton:hover {
+  box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+  transition: 0.5s ease;
+}
+.removeButton {
+  padding: 5px 10px;
+  background-color: #048f39;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.removeButton:hover {
+  box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+  transition: 0.5s ease;
+}
+
+.checkoutButton {
+  padding: 5px 10px;
+  background-color: #048f39;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.checkoutButton:hover {
+  box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+  transition: 0.5s ease;
+}
+
+.payInput {
+  padding: 5px 10px;
+  border: 2px solid #048f39;
+  border-radius: 4px;
+  background-color: #048f39;
+  font-size: 16px;
+  color: #ffffff;
+  outline: none;
+  transition: 0.5s ease;
+  cursor: text;
+}
+.payInput[type="number"]::-webkit-outer-spin-button,
+.payInput[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.payInput::-ms-expand {
+  display: none;
+}
+
+.payInput:focus {
+  box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+  transition: 0.5s ease;
+}
+
+.payButton {
+  padding: 5px 10px;
+  background-color: #048f39;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.payButton:hover {
+  box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+  transition: 0.5s ease;
+}
+
+.shopAgainButton {
+  padding: 5px 10px;
+  background-color: #048f39;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.shopAgainButton:hover {
+  box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+  transition: 0.5s ease;
 }

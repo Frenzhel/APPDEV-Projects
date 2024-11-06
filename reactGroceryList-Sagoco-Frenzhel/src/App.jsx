@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import Shop from './Shop';
 import Receipt from './Receipt';
+import grapeImage from './assets/grape.png';
+import orangeImage from './assets/orange.png';
+import kiwiImage from './assets/kiwi.png';
+import bananaImage from './assets/banana.png';
+import cucumberImage from './assets/cucumber.png';
+import './App.css';
 
 export default function App() {
   const items = [
-    { id: 1, name: "Grapes", price: 50, image:"https://img.freepik.com/premium-vector/single-grape-fruit-pixel-art-style_475147-1988.jpg?semt=ais_hybrid"},
-    { id: 2, name: "Oranges", price: 20 },
-    { id: 3, name: "Kiwis", price: 30 },
-    { id: 4, name: "Bananas", price: 10 },
-    { id: 5, name: "Cucumbers", price: 15 },
+    { id: 1, name: "Grapes", price: 50, image: grapeImage },
+    { id: 2, name: "Oranges", price: 20, image: orangeImage },
+    { id: 3, name: "Kiwis", price: 30, image: kiwiImage },
+    { id: 4, name: "Bananas", price: 10, image: bananaImage },
+    { id: 5, name: "Cucumbers", price: 15, image: cucumberImage },
   ];
 
   const [cart, setCart] = useState([]);
@@ -38,18 +44,20 @@ export default function App() {
     if (quantityToRemove <= 0) return;
 
     setCart((prevCart) => {
-      const updatedCart = prevCart.map((item) =>
-        item.id === itemId
-          ? {
-              ...item,
-              quantity: Math.max(item.quantity - quantityToRemove, 0),
-            }
-          : item
-      ).filter((item) => item.quantity > 0); 
+      const updatedCart = prevCart
+        .map((item) =>
+          item.id === itemId
+            ? {
+                ...item,
+                quantity: Math.max(item.quantity - quantityToRemove, 0),
+              }
+            : item
+        )
+        .filter((item) => item.quantity > 0);
 
       return updatedCart;
     });
-  };
+  }
 
   const handleCheckout = () => {
     setIsCheckedOut(true);
@@ -63,6 +71,12 @@ export default function App() {
   const handleAddPayment = (amount) => {
     setAmountPaid((prevAmount) => prevAmount + amount);
   };
+
+  const handleShopAgain = () => {
+    setCart([]);
+    setAmountPaid(0);
+    setIsCheckedOut(false);
+  }
 
   return (
     <div>
@@ -81,8 +95,9 @@ export default function App() {
           totalPrice={totalPrice}
           amountPaid={amountPaid}
           onPayment={handleAddPayment}
+          onShopAgain={handleShopAgain}
         />
       )}
     </div>
-  );
+  )
 }

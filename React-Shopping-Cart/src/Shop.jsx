@@ -3,7 +3,7 @@ export default function Shop(props){
     let Shopitems = props.items
     const [cart,setCart] = useState([])
 
-    function addItem(){
+    function addItem(item){
         setCart(c => [...c, item])
     }
 
