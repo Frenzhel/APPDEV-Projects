@@ -4,6 +4,7 @@ import './index.css';
 export default function Reviews() {
     const [gameName, setGameName] = useState('');
     const [reviewText, setReviewText] = useState('');
+    const [rating, setRating] = useState(0);
     const [reviews, setReviews] = useState([]);
 
     function handleGameNameChange(event) {
@@ -14,19 +15,26 @@ export default function Reviews() {
         setReviewText(event.target.value)
     }
 
+    function handleRatingChange(newRating) {
+        setRating(newRating)
+    }
+
     function addReview() {
-        if (gameName.trim() === '' || reviewText.trim() === '') {
-            alert('Please fill in both fields to add a review.')
+        if (gameName.trim() === '' || reviewText.trim() === '' || rating === 0) {
+            alert('Please fill in all fields and select a rating to add a review.')
             return
         }
+
         const newReview = {
             gameName,
             reviewText,
+            rating,
             date: new Date().toLocaleDateString(),
-        }
+        };
         setReviews([...reviews, newReview])
         setGameName('')
         setReviewText('')
+        setRating(0)
     }
 
     const renderReviewForm = () => (
@@ -43,9 +51,21 @@ export default function Reviews() {
                 value={reviewText}
                 onChange={handleReviewTextChange}
             />
+            <div className="star-rating">
+                {[1, 2, 3, 4, 5].map((star) => (
+                    <span
+                        key={star}
+                        className={`star ${star <= rating ? 'filled' : ''}`}
+                        onClick={() => handleRatingChange(star)}
+                    >
+                        ★
+                    </span>
+                ))}
+            </div>
+            <br />
             <button onClick={addReview}>Add Review</button>
         </div>
-    )
+    );
 
     const renderReviews = () => (
         <div>
@@ -55,6 +75,16 @@ export default function Reviews() {
                     {reviews.map((review, index) => (
                         <li key={index}>
                             <strong>{review.gameName}</strong> - {review.date}
+                            <div className="star-rating">
+                                {[1, 2, 3, 4, 5].map((star) => (
+                                    <span
+                                        key={star}
+                                        className={`star ${star <= review.rating ? 'filled' : ''}`}
+                                    >
+                                        ★
+                                    </span>
+                                ))}
+                            </div>
                             <p>{review.reviewText}</p>
                         </li>
                     ))}
@@ -63,12 +93,12 @@ export default function Reviews() {
                 <p>No reviews added yet.</p>
             )}
         </div>
-    )
+    );
 
     return (
         <div className="app">
             {renderReviewForm()}
             {renderReviews()}
         </div>
-    )
+    );
 }

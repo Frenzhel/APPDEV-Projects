@@ -154,3 +154,16 @@ li p {
 h4, label, p {
   line-height: 1.5;
 }
+.star-rating {
+  font-size: 24px;
+  color: gray;
+  cursor: pointer;
+}
+
+.star.filled {
+  color: rgb(255, 0, 170);
+}
+
+.star {
+  margin-right: 5px;
+}
