@@ -1,0 +1,191 @@
+/* Full Width Class for the entire content */
+.full-width {
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Container (used for Home only) */
+.container {
+  max-width: 1200px; /* Limit width for home page */
+  margin: 0 auto;
+  padding: 20px;
+  color: #00aeff;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #00aeff2a; /* Dark background for the navbar */
+  padding: 10px;
+  box-shadow: 0 4px 10px #00aeff2a; /* Glow effect */
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center; /* Center navbar items horizontally */
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  width: auto; /* Each list item will adjust based on content */
+  display: inline-block;
+}
+
+.navbar ul li a {
+  display: block; /* Make <a> element a block-level to make the whole area clickable */
+  color: #1d1d1d; /* Neon green color */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 20px; /* Add padding for better clickability */
+  position: relative;
+  text-align: center;
+  width: 100%; /* Makes the <a> element span the full width of the list item */
+  box-sizing: border-box; /* Ensures padding doesn't affect width calculation */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth hover transition */
+}
+
+.navbar ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #FF6347; /* Red underline on hover */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.navbar ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar ul li a:hover {
+  background-color: #00aeff2a; /* Light green background on hover */
+  transform: scale(1.05); /* Slightly scale up the item on hover */
+}
+
+.navbar ul li a:active {
+  transform: scale(1); /* Reset scaling when the item is clicked */
+}
+
+/* Mobile View - Stacked Layout */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column; /* Stack the navbar items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .navbar ul li {
+    width: 100%; /* Make each navbar item take full width */
+  }
+
+  .navbar ul li a {
+    text-align: center; /* Ensure text is centered */
+    padding: 15px; /* Adjust padding for touch devices */
+  }
+}
+
+
+/* General Styling for All Lists (Full Width) */
+ul {
+  width: 100%; /* Ensure the list uses 100% width of the parent container */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+ul li {
+  width: 100%; /* Each list item takes 100% of the parent width */
+  padding: 15px;
+  margin: 5px 0;
+  background-color: #00aeff2a;
+  border-radius: 8px;
+  border: 1px solid #00aeff;
+  box-sizing: border-box; /* Ensure padding doesn't break layout */
+}
+
+/* Hover effect for list items */
+ul li:hover {
+  background-color: #00aeff2a;
+  cursor: pointer;
+}
+
+/* Section Titles (h2, h3, etc.) */
+h1, h2, h3 {
+  font-family: 'Courier New', monospace;
+  font-size: 2em;
+  color: #00aeff;
+  text-shadow: 0 0 5px#005e8a, 0 0 10px#005e8a, 0 0 15px#005e8a, 0 0 25px#005e8a, 0 0 35px#005e8a;
+  letter-spacing: 1px;
+}
+
+div {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #00aeff2a; /* Light green background for divs */
+  border-radius: 8px;
+  border: 1px solid #00aeff;
+}
+
+/* Pixelated Effect */
+.pixel-effect {
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  color: #00aeff;
+  text-shadow: 0 0 5px#005e8a, 0 0 10px#005e8a, 0 0 15px#005e8a, 0 0 25px#005e8a, 0 0 5px#005e8a;
+  letter-spacing: 1px;
+}
+
+/* Button Styling */
+button {
+  background-color: #00aeff;
+  color: #121212;
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #FF6347;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
