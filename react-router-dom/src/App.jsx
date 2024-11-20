@@ -6,6 +6,7 @@ import UseKeyboard from './UseKeyboard';
 import Troubleshooting from './Troubleshooting';
 import Maintenance from './Maintenance';
 import WarrantySupport from './WarrantySupport';
+import Footer from './Footer';
 import './index.css'
 
 export default function App() {
