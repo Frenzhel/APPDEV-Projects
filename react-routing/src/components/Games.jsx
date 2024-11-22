@@ -11,7 +11,7 @@ export default function Games() {
             <ul>
                 {games.map((game)=> (
                     <li key={games.id}>
-                        <Link to={'/games/${game.id}'} state={{game}}>{game.name.toUpperCase()}</Link> - {game.description}
+                        <Link to={`/games/${game.id}`} state={{game}}>{game.name.toUpperCase()}</Link> - {game.description}
                     </li>
                 ))}
             </ul>

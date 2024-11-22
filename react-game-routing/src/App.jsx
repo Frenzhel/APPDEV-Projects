@@ -1,30 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Link, Route, Routes } from 'react-router-dom'
-import Home from './components/Home'
-import About from './components/About'
-import Games from './components/Games'
-import NotFound from './NotFound'
-import Game from './components/Game'
+import { Link, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import Games from './components/Games';
+import NotFound from './components/NotFound';
+import Game from './components/Game';
+import './index.css';
 
 export default function App() {
-
   return (
     <>
-      <nav>
+      <nav className="nav">
         <h1>My Game Lists</h1>
-        <ul >
-          <li ><Link to="/">Home</Link></li>
-          <li ><Link to="/about">About</Link></li>
-          <li ><Link to="/games">Games</Link></li>
+        <br />
+        <ul>
+          <li><Link to="/" className="nav-link">Home</Link></li>
+          <li><Link to="/games" className="nav-link">Games</Link></li>
         </ul>
       </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
         <Route path="/games" >
           <Route index element={<Games />} />
           <Route path=':gameId' element={<Game />} />
@@ -32,5 +26,5 @@ export default function App() {
         <Route path='*' element={<NotFound />} />
       </Routes>
     </>
-  )
+  );
 }
