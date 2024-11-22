@@ -14,7 +14,7 @@ export default function App() {
   return (
     <>
       <nav>
-        <h1>This is my React Page</h1>
+        <h1>My Game Lists</h1>
         <ul >
           <li ><Link to="/">Home</Link></li>
           <li ><Link to="/about">About</Link></li>
