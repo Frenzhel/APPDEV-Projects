@@ -36,7 +36,7 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
 
-      {isEntered && <div className="footah"><Footer /></div>}
+      {/*isEntered && <div className="footah"><Footer /></div>*/}
     </>
   )
 }

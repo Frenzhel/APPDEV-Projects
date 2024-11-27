@@ -5,7 +5,7 @@ export default function Home({ setIsEntered, isEntered }) {
   useEffect(() => {
     if (!isEntered) {
       const handleEnter = () => setIsEntered(true);
-
+      
       window.addEventListener("keydown", handleEnter);
       window.addEventListener("click", handleEnter);
 
@@ -30,7 +30,9 @@ export default function Home({ setIsEntered, isEntered }) {
         <h1>Welcome to my GameList!</h1>
         <p>This is a collection of games I have played fully.</p>
       </div>
-      
+      <div className="footah">
+        <Footer />
+      </div>
     </>
   )
 }

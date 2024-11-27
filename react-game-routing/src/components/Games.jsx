@@ -72,7 +72,9 @@ export default function Games() {
           </li>
         ))}
       </ul>
-
+      <div className="footah">
+        <Footer />
+      </div>
     </>
   )
 }

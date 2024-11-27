@@ -21,7 +21,7 @@ export default function Game() {
           ))}
         </ul>
       </div>
-
+      <Footer />
     </>
-  );
+  )
 }
