@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const games = [
   {id: 1, 
@@ -56,7 +57,7 @@ const games = [
       {user:"FinleyLaz", rate: "8/10", comment: "Ngl I love this game, my only issue is the ammount of racists, sexists, and just generally bad people I see rage bating in most lobbies."},
       {user:"Grey Ghost", rate: "10/10", comment: "A simple concept that works and plays well, especially if you have friends. Great for a game night with non-gamers."},
     ]},
-];
+]
 
 export default function Games() {
   return (
@@ -71,6 +72,7 @@ export default function Games() {
           </li>
         ))}
       </ul>
+
     </>
-  );
+  )
 }

@@ -5,6 +5,9 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-image: url("https://cdna.artstation.com/p/assets/images/images/028/102/058/original/pixel-jeff-matrix-s.gif?1593487263");
   background-size: cover;
   font-family: 'Roboto', sans-serif;
@@ -13,23 +16,56 @@ body {
   padding: 20px;
 }
 
+main {
+  flex-grow: 1;
+}
+
+.footah footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #1a1a1ad0;
+  padding: 20px;
+  text-align: center;
+  color: #ddd;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+footer hr {
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #00d9ff;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 15px #ffffff, 0 0 30px #00d9ff;
+}
+
 .enter-screen {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* No background color */
 }
 
 .enter-screen h1 {
-  font-size: 3rem; /* Large text */
-  color: #ff00ff; /* Magenta color */
+  font-size: 3rem;
+  color: #ff00ff;
   text-align: center;
   position: relative;
   animation: neonGlow 1.5s infinite alternate, glitch 1.5s infinite;
 }
 
-/* Stronger neon glow effect */
 @keyframes neonGlow {
   0% {
     text-shadow: 
@@ -53,7 +89,6 @@ body {
   }
 }
 
-/* Glitch animation */
 @keyframes glitch {
   0% {
     transform: skew(0deg);
