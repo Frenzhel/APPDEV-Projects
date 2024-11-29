@@ -4,7 +4,7 @@ export default function Footer() {
         <footer>
           <hr />
           <p>
-            &copy; {new Date().getFullYear()} KeyStaxx|| Created by: <span>Frenzhel Vhonn Sagoco</span>
+            &copy; {new Date().getFullYear()} KeyStaxx || Created by: <span>Frenzhel Vhonn Sagoco</span>
           </p>
         </footer>
       </div>
