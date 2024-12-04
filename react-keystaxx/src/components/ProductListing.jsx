@@ -4,7 +4,6 @@ export default function ProductListing() {
   const products = [
     { id: 1, name: "Artisan Keyboard 1", description: "A beautiful custom keyboard." },
     { id: 2, name: "Artisan Keyboard 2", description: "Another handcrafted masterpiece." },
-    // Add more
   ]
 
   return (
