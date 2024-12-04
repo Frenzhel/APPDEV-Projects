@@ -336,6 +336,20 @@ span:before
   right:-8px;
   box-shadow:0 0 20px #7df9ff, 0 0 25px #7df9ff, 0 0 20px #7df9ff, 0 0 25px #7df9ff;
 }
+.star-rating {
+  font-size: 24px;
+  color: gray;
+  cursor: pointer;
+}
+
+.star.filled {
+  color: rgb(255, 0, 170);
+}
+
+.star {
+  margin-right: 5px;
+}
+
 @keyframes animateC
 {
   0%

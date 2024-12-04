@@ -29,5 +29,5 @@ export default function Reviews() {
         ))}
       </ul>
     </div>
-  );
+  )
 }
