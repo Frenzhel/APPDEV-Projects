@@ -5,12 +5,12 @@ export default function ProductListing() {
     { 
       id: 1, 
       name: "MK Shadow Guard Dark Multi LED 60% Mechanical Keyboard", 
-      image: "https://example.com/mk-shadow-guard.jpg" // Replace with real URL
+      image: "https://example.com/mk-shadow-guard.jpg"
     },
     { 
       id: 2, 
       name: "Artisan Keyboard 2", 
-      image: "https://example.com/artisan-keyboard-2.jpg" // Replace with real URL
+      image: "https://example.com/artisan-keyboard-2.jpg" 
     },
   ];
 
@@ -19,9 +19,8 @@ export default function ProductListing() {
   };
 
   return (
-    <div>
-      <h2>Product Listing</h2>
-      <ul>
+    <div className="content-container">
+      <ul className='product'>
         {products.map(product => (
           <li key={product.id}>
             <Link to={`/products/${product.id}`}>
@@ -31,7 +30,7 @@ export default function ProductListing() {
                 width="200" 
                 onError={handleImageError}
               />
-              <h3>{product.name}</h3>
+              <h5>{product.name}</h5>
             </Link>
           </li>
         ))}

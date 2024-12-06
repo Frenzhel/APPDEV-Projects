@@ -8,7 +8,7 @@ export default function CompanyProfile() {
   ];
 
   return (
-    <div>
+    <div className="content-container">
       <h2>Company Profile</h2>
       <p>Meet our talented team:</p>
       <ul>

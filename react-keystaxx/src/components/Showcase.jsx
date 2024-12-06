@@ -6,7 +6,7 @@ export default function Showcase() {
     ]
 
     return (
-        <div>
+        <div className="content-container">
         <h2>Showcase</h2>
         {reviews.map((review, index) => (
             <div key={index}>

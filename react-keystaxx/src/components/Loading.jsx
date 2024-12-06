@@ -7,7 +7,9 @@ export default function Loading() {
                 <div className="load-text">
                     LOADING
                 </div>
-                <span></span>
+                <div className="load-span">
+                    <span></span>
+                </div>
             </div>
         </div>
     )

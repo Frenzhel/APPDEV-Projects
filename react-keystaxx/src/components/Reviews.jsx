@@ -9,10 +9,10 @@ export default function Reviews() {
       setReviews([...reviews, review]);
       setReview("");
     }
-  };
+  }
 
   return (
-    <div>
+    <div className="content-container">
       <h2>Reviews</h2>
       <p>We value your feedback! Please leave your review below:</p>
       <input

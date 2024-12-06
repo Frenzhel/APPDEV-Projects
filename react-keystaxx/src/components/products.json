@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "MK Shadow Guard Dark Multi LED 60% Mechanical Keyboard",
+        "image": "https://example.com/mk-shadow-guard.jpg",
+        "description": "An MK exclusive! This highly unique Limited Edition Heroes of Shadow Guard themed keyboard...",
+        "characteristics": [
+        "Size: Compact",
+        "Series: Shadow Guard",
+        "Logical Layout: UK QWERTY",
+        "Keycap Material: ABS",
+        "Color: Grey",
+        "Physical Layout: ANSI",
+        "USB Key Rollover: Full"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Artisan Keyboard 2",
+        "image": "https://example.com/artisan-keyboard-2.jpg",
+        "description": "Another handcrafted masterpiece."
+    }
+]

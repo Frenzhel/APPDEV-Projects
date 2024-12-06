@@ -16,7 +16,7 @@ export default function EmployeeResume() {
   }
 
   return (
-    <div>
+    <div className="content-container">
       <h2>{employee.name}</h2>
       <p>Position: {employee.position}</p>
       <p>About: {employee.bio}</p>

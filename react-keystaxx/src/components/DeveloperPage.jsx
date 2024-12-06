@@ -8,7 +8,7 @@ export default function DeveloperPage() {
   }
 
   return (
-    <div>
+    <div className="content-container">
       <h2>Developer Page</h2>
       <p>
         This website was crafted by a dedicated developer and designer who strive to deliver an
